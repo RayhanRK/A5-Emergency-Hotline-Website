@@ -14,36 +14,62 @@
      crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- fav icon -->
      <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+
+<!--Google font import in style -->
+    <style type="text/tailwindcss">
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        @import 'tailwindcss';
+        @theme{
+            --font-inter: "Inter", sans-serif;
+            --font-hind-madurai: "Hind Madurai", sans-serif;
+            --font-roboto: "Roboto", sans-serif;
+        }
+    </style>
 </head>
-<body class="bg-green-50">
 
-    <!-- navbar section -->
-     <header class="flex justify-between items-center py-6 w-11/12 mx-auto">
+<body class=" font-inter ">
 
-            <!-- logo side -->
-        <div class="flex justify-center items-center gap-2">
-            <img class="w-[50px] ml-4" src="./assets/logo.png" alt="">
-            <h2 class="text-[#006747] text-xl font-bold" >Emergency <br> Service</h2>
-        </div>
+<!--  Full Navbar Section -->
+<header class="max-w-[1920px] mx-auto w-11/12 flex max-sm:flex-col justify-between items-center py-3 gap-4">
 
-            <!--Right side buttons -->
-         <div class="flex items-center gap-5" >
-            <button  class="btn bg-green-200 rounded-4xl font-bold text-xl">
-                <span id="heart-count">0</span>
-                <img class="w-6" src="./assets/heart.png" alt="">
-            </button>
-            <button  class="btn bg-green-200 rounded-4xl font-bold text-xl">
-                <span id="coin-count">0</span>
-                <img class="w-6" src="./assets/coin.png" alt="">
-            </button>
-            <button  class="btn bg-[#00A63E] rounded-4xl font-semibold text-lg text-white">
-                <span id="heart-count">0</span> Copy
-              
-            </button>
+  <!-- Logo Side -->
+  <div class="flex justify-center items-center gap-2">
+    <img class="w-[50px]" src="./assets/logo.png" alt="Logo">
+    <h2 class="text-[#006747] text-xl font-bold text-center sm:text-left">
+      Emergency <br> Service
+    </h2>
+  </div>
 
-         </div>   
-     </header>
+  <!-- Right Side Buttons -->
+  <div class="flex flex-wrap justify-center gap-4">
+    <button class="btn bg-green-200 px-6 py-2 rounded-full font-bold text-xl flex items-center gap-2 min-w-[120px]">
+      <span id="heart-count">0</span>
+      <img class="w-6" src="./assets/heart.png" alt="Heart">
+    </button>
+    <button class="btn bg-green-200 px-6 py-2 rounded-full font-bold text-xl flex items-center gap-2 min-w-[120px]">
+      <span id="coin-count">0</span>
+      <img class="w-6" src="./assets/coin.png" alt="Coin">
+    </button>
+    <button class="btn bg-[#00A63E] px-6 py-2 rounded-full font-semibold text-lg text-white flex items-center gap-2 min-w-[120px]">
+      <span id="heart-count">0</span> Copy
+    </button>
+  </div>
 
-    
+</header>
+
+<main>
+    <!-- Banner section -->
+     <section class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] font-hind-madurai text-white text-center mx-auto p-5">
+        <img class="w-[90px] mx-auto" src="./assets/logo-dark.png" alt="logo">
+        <h2 class="text-[2.5rem] font-bold">Emergency Service Directory</h2>
+        <p class="text-[1rem] ">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+     </section>
+
+
+</main>
+
+
+    <script src="./script.js"></script>
 </body>
+
 </html>

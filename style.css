@@ -1,3 +1,11 @@
-@import "tailwindcss";
+/* connect tailwind auto suggestion */
+@import "tailwindcss";  
 
-/* tailwind.config.js */
+/* google fonts import url */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@theme {
+    --font-inter: "Inter", sans-serif;
+    --font-hind-madurai: "Hind Madurai", sans-serif;
+    --font-roboto: "Roboto", sans-serif;
+}
