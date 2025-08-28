@@ -1,75 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emergency Service</title>
-         <!-- Daisy Ui & tailwind cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- Daisy Ui & tailwind cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- font-awesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
-    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- fav icon -->
-     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
 
-<!--Google font import in style -->
+    <!--Google font import in style -->
     <style type="text/tailwindcss">
-        @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-        @import 'tailwindcss';
-        @theme{
-            --font-inter: "Inter", sans-serif;
-            --font-hind-madurai: "Hind Madurai", sans-serif;
-            --font-roboto: "Roboto", sans-serif;
-        }
+      @import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+      @import "tailwindcss";
+      @theme {
+        --font-inter: "Inter", sans-serif;
+        --font-hind-madurai: "Hind Madurai", sans-serif;
+        --font-roboto: "Roboto", sans-serif;
+      }
     </style>
-</head>
+  </head>
 
-<body class=" font-inter ">
+  <body class="font-inter">
+    <!--  Full Navbar Section -->
+    <header
+      class="max-w-[1920px] mx-auto w-11/12 flex max-sm:flex-col justify-between items-center py-3 gap-4"
+    >
+      <!-- Logo Side -->
+      <div class="flex justify-center items-center gap-2">
+        <img class="w-[50px]" src="./assets/logo.png" alt="Logo" />
+        <h2 class="text-[#006747] text-xl font-bold text-center sm:text-left">
+          Emergency <br />
+          Service
+        </h2>
+      </div>
 
-<!--  Full Navbar Section -->
-<header class="max-w-[1920px] mx-auto w-11/12 flex max-sm:flex-col justify-between items-center py-3 gap-4">
+      <!-- Right Side Buttons -->
+      <div class="flex flex-wrap justify-center gap-4">
+        <button
+          class="btn bg-green-200 px-6 py-2 rounded-full font-bold text-xl flex items-center gap-2 min-w-[120px]"
+        >
+          <span id="heart-count">0</span>
+          <img class="w-6" src="./assets/heart.png" alt="Heart" />
+        </button>
+        <button class="btn bg-green-200 px-6 py-2 rounded-full font-bold text-xl flex items-center gap-2 min-w-[120px]">
+          <span id="coin-count">100</span>
+          <img class="w-6" src="./assets/coin.png" alt="Coin" />
+        </button>
+        <button
+          class="btn bg-[#00A63E] px-6 py-2 rounded-full font-semibold text-lg text-white flex items-center gap-2 min-w-[120px]">
+          <span id="copy-count">0</span> Copy
+        </button>
+      </div>
+    </header>
 
-  <!-- Logo Side -->
-  <div class="flex justify-center items-center gap-2">
-    <img class="w-[50px]" src="./assets/logo.png" alt="Logo">
-    <h2 class="text-[#006747] text-xl font-bold text-center sm:text-left">
-      Emergency <br> Service
-    </h2>
-  </div>
+    <main>
+      <!-- Banner section -->
+      <section class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] 
+      font-hind-madurai text-white text-center mx-auto p-5">
 
-  <!-- Right Side Buttons -->
-  <div class="flex flex-wrap justify-center gap-4">
-    <button class="btn bg-green-200 px-6 py-2 rounded-full font-bold text-xl flex items-center gap-2 min-w-[120px]">
-      <span id="heart-count">0</span>
-      <img class="w-6" src="./assets/heart.png" alt="Heart">
-    </button>
-    <button class="btn bg-green-200 px-6 py-2 rounded-full font-bold text-xl flex items-center gap-2 min-w-[120px]">
-      <span id="coin-count">0</span>
-      <img class="w-6" src="./assets/coin.png" alt="Coin">
-    </button>
-    <button class="btn bg-[#00A63E] px-6 py-2 rounded-full font-semibold text-lg text-white flex items-center gap-2 min-w-[120px]">
-      <span id="heart-count">0</span> Copy
-    </button>
-  </div>
-
-</header>
-
-<main>
-    <!-- Banner section -->
-     <section class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] font-hind-madurai text-white text-center mx-auto p-5">
-        <img class="w-[90px] mx-auto" src="./assets/logo-dark.png" alt="logo">
+        <img class="w-[90px] mx-auto" src="./assets/logo-dark.png" alt="logo" />
         <h2 class="text-[2.5rem] font-bold">Emergency Service Directory</h2>
-        <p class="text-[1rem] ">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
-     </section>
+        <p class="text-[1rem]"> Government Emergency Services at Your Fingertip – A Project by
+          Government of the People’s Republic of Bangladesh
+        </p>
+      </section>
 
+      <!--------------------Emergency & History Combine Section ------------------------------->
 
-</main>
+      <section class="bg-[#F5FFF6] p-10 min-h-screen">
 
+        <!----------- Hotline and History Container ------------------------------->
+        <div class="max-w-[1920px] mx-auto grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-4">
 
+          <!-- main content div -->
+          <div id="hotline" class="grid xl:grid-cols-3 sm:grid-cols-2 xl:col-span-3 sm:col-span-2 gap-4">
+            
+            <!-- here dynamic hotline content will come from js innerHtml -->
+          </div>
+
+          <!------------ Sidebar History Card container ------------->
+          <div id="history" class="bg-base-100 card w-full shadow-sm lg:col-span-1 sm:col-span-2 p-4 mx-2">
+
+            <!-- Call history + Clear button div-->
+            <div class="flex justify-between items-center">
+              <div class="text-gray-500 text-2xl flex items-center gap-2">
+                <i class="fa-regular fa-clock"></i>
+                <h3 class="text-[#111] font-semibold">Call History</h3>
+              </div>
+
+              <button id="clear-btn" type="button" class="bg-[#00a63e] px-4 py-2 rounded-full text-xl text-white 
+              cursor-pointer duration-350 hover:bg-[#d4d6d4]">Clear
+              </button>
+            </div>
+
+            <!-- Call history list div -->
+            <div id="call-history" class="mt-3 space-y-2"></div>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>
